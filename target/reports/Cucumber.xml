@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="67.668" tests="4" skipped="0" failures="1" errors="0">
+<testcase classname="Connexion utilisateur" name="Tentative de connexion échouée avec email incorrect et mot de passe incorrect" time="24.232">
+<failure type="java.lang.AssertionError" message="le compte n'a pas pu être accédé">
+<![CDATA[java.lang.AssertionError: le compte n'a pas pu être accédé
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at stepDefinitions.ConnexionSteps.l_utilisateur_accéder_au_compte(ConnexionSteps.java:108)
+	at ✽.l'utilisateur "peut" accéder au compte(file:///C:/Users/PCPORTABLE/IdeaProjects/com.orchestra/src/test/resources/features/TC0101_LoginTestNegatif.feature:17)
+]]>
+</failure>
+<system-out><![CDATA[
+Given L'utilisateur accède à la page d'accueil..............................passed
+And L'utilisateur attend 1 secondes.........................................passed
+And Il clique sur le bouton de "compte".....................................passed
+When L'utilisateur entre le nom d'utilisateur "emailUtilisateurIncorrect" et le mot de passe "motDePasseIncorrect".passed
+And Il clique sur le bouton de "connexion"..................................passed
+Then l'utilisateur "peut" accéder au compte.................................failed
+]]></system-out>
+</testcase>
+<testcase classname="Connexion utilisateur" name="Tentative de connexion échouée avec email correct et mot de passe incorrect" time="14.115">
+<system-out><![CDATA[
+Given L'utilisateur accède à la page d'accueil..............................passed
+And L'utilisateur attend 1 secondes.........................................passed
+And Il clique sur le bouton de "compte".....................................passed
+When L'utilisateur entre le nom d'utilisateur "emailUtilisateurCorrect" et le mot de passe "motDePasseIncorrect".passed
+And Il clique sur le bouton de "connexion"..................................passed
+Then l'utilisateur "ne peut pas" accéder au compte..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Connexion utilisateur" name="Tentative de connexion échouée avec email incorrect et mot de passe correct" time="14.08">
+<system-out><![CDATA[
+Given L'utilisateur accède à la page d'accueil..............................passed
+And L'utilisateur attend 1 secondes.........................................passed
+And Il clique sur le bouton de "compte".....................................passed
+When L'utilisateur entre le nom d'utilisateur "emailUtilisateurIncorrect" et le mot de passe "motDePasseCorrect".passed
+And Il clique sur le bouton de "connexion"..................................passed
+Then l'utilisateur "ne peut pas" accéder au compte..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Connexion utilisateur" name="Tentative de connexion échouée avec email correct et mot de passe correct" time="14.843">
+<system-out><![CDATA[
+Given L'utilisateur accède à la page d'accueil..............................passed
+And L'utilisateur attend 1 secondes.........................................passed
+And Il clique sur le bouton de "compte".....................................passed
+When L'utilisateur entre le nom d'utilisateur "emailUtilisateurCorrect" et le mot de passe "motDePasseCorrect".passed
+And Il clique sur le bouton de "connexion"..................................passed
+Then l'utilisateur "peut" accéder au compte.................................passed
+]]></system-out>
+</testcase>
+</testsuite>
